@@ -1,84 +1,80 @@
-/* welcome page starts here */
-
+/* Reset some default styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: #fefaf7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
 header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: #F8F0E3;
+    background-color: #fff3e6;
+    padding: 10px 60px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem 5rem 0.5rem 5rem;
+    border-bottom: 2px solid #f3d1bd;
+    flex-wrap: wrap;
 }
-
-header a {
-    text-decoration: none;
-    color: #333333;
-    padding: 0.3rem 0.5rem;
-    margin: 0 0.3rem;
-    font-size: 1.1rem;
-    font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-}
-
-header a:hover,
-header a.active {
-    color: #778899;
-    background-color: #E8D9C4;
-}
-
 
 header h2 {
-    color: #A0522D;
-    margin-right: 0rem;
+    color: #b3541e;
     font-size: 1.8rem;
     font-weight: bold;
-    font-family: 'Lucida Sans', sans-serif;
 }
 
-
-.links {
-    margin-left: 5rem;
-    font-size: 10px;
+/* Navigation Links Styling */
+header .links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+header .links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+header .links a:hover,
+header .links a.active {
+    color: #b3541e;
+}
+
+/* Main Container */
 .main_container {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.img {
-    height: 100vh;
-    width: 50%;
     background-image: url(assets/main_pg1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+/* Welcome Section */
 .welcome {
-    height: 100vh;
     width: 50%;
-    background-color: #E8D9C4;
+    height: 100vh;
+    background: rgba(248, 240, 227, 0.9);
     text-align: center;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    padding: 2rem;
+    border-left: 1px solid #E8D9C4;
 }
 
 .welcome h1 {
@@ -99,144 +95,131 @@ header h2 {
     margin-top: 2rem;
     font-size: 1.2rem;
     font-weight: 600;
-    background-color: #778899;
+    background-color: #A0522D;
     color: white;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .start:hover {
-    background-color: #5f6f7f;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    color: white;
+    background-color: #8B4513;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* home page starts here */
+/* Home Page Image Section */
 .img_sec {
     width: 100%;
     height: 95vh;
     background-image: url(assets/image_sec.jpg);
-    background-position-x: right;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
-    text-align: start;
     padding-left: 5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .img_sec h2 {
-    padding-top: 15rem;
-    margin-bottom: 2rem;
     font-size: 2rem;
-    color: #F8F0E3;
+    margin-bottom: 1rem;
 }
 
 .img_sec p {
     font-size: 1.2rem;
-    color: #E8D9C4;
+    color: wheat;
 }
 
+/* Footer */
 .footer {
-    padding: 1rem 0;
-    text-align: center;
     background-color: #E8D9C4;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.1rem;
     color: #333333;
 }
 
-.back_img {
-    width: 100%;
-    height: 100vh;
-    background-image: url(assets/image_sec.jpg);
-    background-position: center;
-    background-size: cover;
+/* Common Form & Card Layout */
+.main_div, .main_div_blog {
+    width: 90%;
+    max-width: 900px;
+    margin: 4rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(160, 82, 45, 0.1);
 }
 
-.main_div {
-    width: 50%;
-    height: 100vh;
-    margin: auto;
-    background-color: #F8F0E3;
-    padding: 8rem 3rem;
-    color: #333333;
-}
-
-.main_div h2 {
-    font-size: 3rem;
-    padding-bottom: 3rem;
+.main_div h2, .main_div_blog h2 {
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
     color: #A0522D;
-}
-
-.map-box {
-    width: 100%;
-    height: 400px;
 }
 
 .form_content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
-}
-
-.form_content div {
-    padding: 1rem 0;
+    gap: 1.2rem;
 }
 
 .form_content label {
-    font-size: 1.3rem;
-    line-height: 2rem;
+    font-size: 1.2rem;
 }
 
 .form_group {
     display: flex;
     align-items: center;
-    padding: 1rem 0;
-}
-
-.form_group label {
-    width: 150px;
-    font-size: 1.2rem;
+    gap: 1rem;
 }
 
 .form_group input,
 .form_group textarea {
     flex: 1;
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 0.6rem;
     border: 1px solid #E8D9C4;
     border-radius: 8px;
+    font-size: 1rem;
 }
 
-.location {
-    display: flex;
-    justify-content: center;
-}
-
+/* Button */
 .btn {
-    width: 10rem;
-    height: 3rem;
-    font-size: 1.1rem;
-    margin: 10px 0 10px 20rem;
-    font-weight: 600;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #A0522D;
+    background-color: #778899;
     color: white;
     border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 2rem auto 0;
+    display: block;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: #8B4513;
+    background-color: #6a7d8b;
     box-shadow: 1px 1px 4px rgba(25, 25, 25, 0.2);
 }
 
+/* Map */
+.map-box {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+/* Doctor Registration Fields */
 .register_doc input {
     width: 12rem;
     height: 2rem;
     font-size: 1.2rem;
 }
 
-.reg1 {
+.reg1, .reg3 {
     display: inline-flex;
 }
 
@@ -248,23 +231,31 @@ header h2 {
     margin-left: 4.8rem;
 }
 
-.donate_p {
-    font-size: 1.2rem;
-}
-
-.btn_donate {
-    margin-top: 1rem;
-    margin-left: 25rem;
-}
-
 .loc1 input {
     margin-left: 6.8rem;
 }
 
+/* Report & Blog Cards */
+.report-card {
+    background: #fff;
+    border: 1px solid #E8D9C4;
+    margin: 1rem 0;
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    min-height: 250px;
+    height: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Awareness Section */
 .aware p {
     font-size: 1.3rem;
     font-weight: 500;
     padding-bottom: 0.5rem;
+}
+
+.aware ul li {
+    padding: 0.5rem 0;
 }
 
 .aware ul li a {
@@ -275,44 +266,99 @@ header h2 {
     color: #333333;
 }
 
-.aware ul li {
-    padding: 0.5rem 0;
-}
-
 .aware ul li a:hover {
     text-decoration: underline;
     color: #A0522D;
 }
 
-.report-card {
-    background: #E8D9C4;
-    margin: 5px 0px;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
+/* Blog Section */
 .env_blog h3 {
     font-weight: 600;
     font-size: 1.4rem;
-    padding: 0.5rem 0rem;
-    color: #A0522D;
+    padding: 0.5rem 0;
 }
 
 .env_blog p {
     font-size: 1.2rem;
 }
 
-.main_div_blog {
-    padding-top: 4rem;
+/* Donate Paragraph */
+.donate_p {
+    font-size: 1.2rem;
 }
 
-.main_div_blog h2 {
-    padding-bottom: 1rem;
-    color: #A0522D;
-}
-
-.blog-post {
+.btn_donate {
     margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* NAVBAR FIX */
+header {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 2rem; /* spacing between links */
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    margin-left: 5rem;
+    flex-wrap: nowrap;
+}
+
+/* Prevent navbar items from wrapping */
+header a {
+    white-space: nowrap;
+    padding: 0.2rem 0.5rem;  /* no horizontal shift */
+}
+
+/* TEXT FIELD ALIGNMENT + ROUNDED INPUTS */
+.form_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form_group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form_group label {
+    width: 150px;
+    font-size: 1.2rem;
+}
+
+.form_group input,
+.form_group textarea {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #E8D9C4;
+    border-radius: 12px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Ensure inputs don't overflow on smaller screens */
+@media (max-width: 600px) {
+    .form_group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form_group label {
+        width: 100%;
+        margin-bottom: 0.4rem;
+    }
+
+    .form_group input,
+    .form_group textarea {
+        width: 100%;
+    }
 }
