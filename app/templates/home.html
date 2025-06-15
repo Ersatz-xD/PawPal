@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#ffdede">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/icon.png') }}" type="image/png">
+</head>
+<body>
+    <header>
+        <div>
+           <h2>PawPal</h2> 
+        </div>
+        
+        <div class="links">
+            <a href="{{ url_for('main.report') }}">Report Sick Animal</a>
+            <a href="{{ url_for('main.report_cruelty') }}">Report Animal Cruelty</a>
+            <a href="{{ url_for('main.view_reports') }}">View Reports</a>
+            <a href="{{ url_for('main.register') }}">Register Vet</a>
+            <a href="{{ url_for('main.rescue_updates') }}">Rescue Updates</a>
+            <a href="{{ url_for('main.donate') }}">Donate</a>
+            <a href="{{ url_for('main.map_page') }}">Map</a>
+            <a href="{{ url_for('main.awareness') }}">Awareness & Education</a>
+            <a href="{{ url_for('main.blog') }}">Environment Blog</a>
+
+        </div>
+    </header>
+    <div class="img_sec">
+       <h2>
+        Love, Care your Pet
+       </h2>
+       <p>
+        Peope love pet same as their child. A pet better products <br> needed to keep a pet healthy and <br> happy with care services
+       </p>
+    </div>
+    <!-- <div class="card_sec">
+        <div class="upper_cards">
+            <div >
+               <a >Report an Animal</a>
+            </div>
+            <div>
+                <a href="register.html">Register a Doctor</a>
+            </div>
+            <div>
+                <a href="rescue.html">Rescue Updates</a>
+            </div>
+            <div>
+                <a href="donate.html">Donate</a>
+            </div>
+        </div>
+        <div class="lower_cards">
+            <div>
+                <a href="map.html">Map</a>
+            </div>
+            <div>
+                <a href="report_cruelty.html">Report Cruelty</a>
+            </div>
+            <div>
+                <a href="awareness.html">Awareness & Education</a>
+            </div>
+            <div>
+                <a href="blog.html">Environment Blog</a>
+            </div>
+        </div>
+       
+    </div> -->
+     <div class="footer">
+            <p>&copy; 2025 PawPal. All rights reserved.</p>
+    </div>
+    <script>
+        // const startButton = document.querySelector('.report_animal');
+        // startButton.addEventListener('click', () => {
+        //     window.location.href = 'report.html';
+        // });
+    </script>
+</body>
+</html>
