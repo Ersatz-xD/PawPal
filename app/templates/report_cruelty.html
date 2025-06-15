@@ -28,22 +28,23 @@
         <div id="report-cruelty" class="main_div">
             <h2>Report Animal Cruelty</h2>
             <form action="{{ url_for('main.report_cruelty') }}" method="POST">
-                <div class="form_content">
-                    <div class="location loc1">
-                        <label for="cruelty-location">Location:</label>
-                        <input type="text" id="cruelty-location" name="location" required>
-                    </div>
-                    <div>
-                        <label for="animal_type">Animal Breed:</label>
-                        <textarea id="animal_type" name="animal_type"required></textarea>
-                    </div>
-                    <div>
-                        <label for="incident">Incident Description:</label>
-                        <textarea id="incident" name="incident" rows="4" required></textarea>
-                    </div> 
-                    <button type="submit" class="btn">Submit Report</button>
-                </div>
-            </form>
+  <div class="form_content">
+    <div class="form_group">
+      <label for="cruelty-location">Location:</label>
+      <input type="text" id="cruelty-location" name="location" required>
+    </div>
+    <div class="form_group">
+      <label for="animal_type">Animal Breed:</label>
+      <textarea id="animal_type" name="animal_type" required></textarea>
+    </div>
+    <div class="form_group">
+      <label for="incident">Incident Description:</label>
+      <textarea id="incident" name="incident" rows="4" required></textarea>
+    </div> 
+    <button type="submit" class="btn">Submit Report</button>
+  </div>
+</form>
+
         </div>
     </div>
 </body>
