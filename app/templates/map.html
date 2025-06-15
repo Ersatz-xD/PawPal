@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/icon.png') }}" type="image/png">
+</head>
+<body>
+    <header>
+        <h2>PawPal</h2>
+        <div class="links">
+            <a href="{{ url_for('main.home') }}">Home</a>
+            <a href="{{ url_for('main.report') }}">Report Sick Animal</a>
+            <a href="{{ url_for('main.report_cruelty') }}">Report Animal Cruelty</a>
+            <a href="{{ url_for('main.view_reports') }}">View Reports</a>
+            <a href="{{ url_for('main.rescue_updates') }}">Rescue Updates</a>
+            <a href="{{ url_for('main.register') }}">Register Vet</a>
+            <a href="{{ url_for('main.donate') }}">Donate</a>
+            <a href="{{ url_for('main.map_page') }}">Map</a>
+            <a href="{{ url_for('main.awareness') }}">Awareness & Education</a>
+            <a href="{{ url_for('main.blog') }}">Environment Blog</a>
+        </div>
+    </header>
+    <div class="back_img">
+        <div id="map" class="main_div">
+        <h2>Shelters and Doctors Across Punjab</h2>
+        <div id="map-container" class="map-box"></div>
+        <script>
+            function initMap() {
+                const map = new google.maps.Map(document.getElementById("map-container"), {
+                    zoom: 7,
+                    center: { lat: 31.5497, lng: 74.3436 },  // Lahore coordinates
+                });
+
+                // Sample markers for shelters and doctors
+                const shelters = [
+                    { lat: 31.5497, lng: 74.3436, title: "Lahore Animal Shelter" },
+                    { lat: 31.5204, lng: 74.3587, title: "Faisalabad Animal Shelter" }
+                ];
+
+                shelters.forEach(shelter => {
+                    new google.maps.Marker({
+                        position: shelter,
+                        map: map,
+                        title: shelter.title,
+                    });
+                });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+        </div>
+    </div>
+      
+</body>
+</html>
