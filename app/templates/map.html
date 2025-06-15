@@ -10,7 +10,8 @@
 <body>
     <header>
         <h2>PawPal</h2>
-        <div class="links">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="links" id="navLinks">
             <a href="{{ url_for('main.home') }}">Home</a>
             <a href="{{ url_for('main.report') }}">Report Sick Animal</a>
             <a href="{{ url_for('main.report_cruelty') }}">Report Animal Cruelty</a>
@@ -52,6 +53,11 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
         </div>
     </div>
-      
+      <script>
+        function toggleMenu() {
+            const links = document.getElementById("navLinks");
+            links.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
