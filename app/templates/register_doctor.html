@@ -28,26 +28,27 @@
      <div id="register-doctor" class="main_div register_doc">
         <h2>Register a Doctor</h2>
         <form id="doctor-form" method="POST" action="{{ url_for('main.register') }}">
-        <div class="form_content">
-            <div class="reg1">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="reg2">
-                <label for="clinic">Clinic Name:</label>
-                <input type="text" id="clinic" name="clinic" required>
-            </div>
-            <div class="reg3">
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" required>
-            </div>
-            <div class="reg4">
-                <label for="contact">Contact Info:</label>
-                <input type="text" id="contact" name="contact" required>
-            </div>
-            <button class="btn" type="submit">Register</button>
-        </div>  
-        </form>
+  <div class="form_content">
+    <div class="form_group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form_group">
+      <label for="clinic">Clinic Name:</label>
+      <input type="text" id="clinic" name="clinic" required>
+    </div>
+    <div class="form_group">
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required>
+    </div>
+    <div class="form_group">
+      <label for="contact">Contact Info:</label>
+      <input type="text" id="contact" name="contact" required>
+    </div>
+    <button class="btn" type="submit">Register</button>
+  </div>  
+</form>
+
     </div>
 </div>
 
