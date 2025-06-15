@@ -10,7 +10,8 @@
 <body>
     <header>
         <h2>PawPal</h2>
-        <div class="links">
+       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="links" id="navLinks">
             <a href="{{ url_for('main.home') }}">Home</a>
             <a href="{{ url_for('main.report') }}"class="active">Report Sick Animal</a>
             <a href="{{ url_for('main.report_cruelty') }}">Report Animal Cruelty</a>
@@ -46,6 +47,11 @@
             </form>
         </div>
     </div>
-
+<script>
+        function toggleMenu() {
+            const links = document.getElementById("navLinks");
+            links.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
