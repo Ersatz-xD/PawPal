@@ -1,0 +1,192 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fefaf7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #fff3e6;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f3d1bd;
+    flex-wrap: wrap;
+}
+
+header h2 {
+    color: #b3541e;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Navigation Links Styling */
+header .links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+header .links a:hover,
+header .links a.active {
+    color: #b3541e;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: #fff7f2;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #a84322;
+    margin-bottom: 15px;
+}
+
+.hero .quote {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hero .quote span {
+    font-weight: bold;
+    color: #b3541e;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* Card Grid Section */
+.features {
+    padding: 40px 20px;
+}
+
+.card_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.feature_card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 25px 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #f0e0d6;
+}
+
+.feature_card:hover {
+    transform: translateY(-6px);
+}
+
+.feature_card h3 {
+    margin-bottom: 12px;
+    color: #b3541e;
+    font-size: 1.2rem;
+}
+
+.feature_card p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.feature_card a {
+    text-decoration: none;
+    color: white;
+    background-color: #b3541e;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.feature_card a:hover {
+    background-color: #8f3e17;
+}
+
+/* Footer Hadith Section */
+.footer_hadith {
+    text-align: center;
+    background-color: #fff3e6;
+    padding: 30px 20px;
+    font-style: italic;
+    font-size: 1rem;
+    color: #6b432d;
+    margin-top: 40px;
+}
+/* NAVBAR FIX */
+header {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 2rem; /* spacing between links */
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    margin-left: 5rem;
+    flex-wrap: nowrap;
+}
+
+/* Prevent navbar items from wrapping */
+header a {
+    white-space: nowrap;
+    padding: 0.2rem 0.5rem;  /* no horizontal shift */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .links {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header .links a {
+        margin: 8px 12px 0 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card_grid {
+        grid-template-columns: 1fr;
+    }
+}
