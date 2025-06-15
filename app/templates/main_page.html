@@ -1,85 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f9e0db">
-    <title>PawPal</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='assets/icon.png') }}" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f9e0db" />
+  <title>PawPal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="icon" href="{{ url_for('static', filename='assets/icon.png') }}" type="image/png" />
 </head>
+
 <body>
-    <header>
-        <h2>PawPal</h2>
-        <div class="links">
-            <a href="{{ url_for('main.home') }}" class="active">Home</a>
-            <a href="{{ url_for('main.report') }}">Report Sick Animal</a>
-            <a href="{{ url_for('main.report_cruelty') }}">Report Animal Cruelty</a>
-            <a href="{{ url_for('main.view_reports') }}">View Reports</a>
-            <a href="{{ url_for('main.rescue_updates') }}">Rescue Updates</a>
-            <a href="{{ url_for('main.register') }}">Register Vet</a>
-            <a href="{{ url_for('main.donate') }}">Donate</a>
-            <a href="{{ url_for('main.map_page') }}">Map</a>
-            <a href="{{ url_for('main.awareness') }}">Awareness & Education</a>
-            <a href="{{ url_for('main.blog') }}">Environment Blog</a>
+  <header>
+    <h2>PawPal</h2>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="links" id="navLinks">
+      <a href="{{ url_for('main.home') }}" class="active">Home</a>
+      <a href="{{ url_for('main.report') }}">Report Sick Animal</a>
+      <a href="{{ url_for('main.report_cruelty') }}">Report Animal Cruelty</a>
+      <a href="{{ url_for('main.view_reports') }}">View Reports</a>
+      <a href="{{ url_for('main.rescue_updates') }}">Rescue Updates</a>
+      <a href="{{ url_for('main.register') }}">Register Vet</a>
+      <a href="{{ url_for('main.donate') }}">Donate</a>
+      <a href="{{ url_for('main.map_page') }}">Map</a>
+      <a href="{{ url_for('main.awareness') }}">Awareness & Education</a>
+      <a href="{{ url_for('main.blog') }}">Environment Blog</a>
+    </nav>
+  </header>
+
+  <main class="home_wrapper">
+    <section class="hero">
+      <h1>PawPal – Compassion in Action 🐾</h1>
+      <p class="quote">
+        “Whoever is kind to the creatures of God is kind to himself.”<br />
+        <span>– Prophet Muhammad ﷺ (Bukhari)</span>
+      </p>
+      <p>We’re on a mission to connect compassion with action across Punjab — helping animals, registering vets, raising awareness, and more.</p>
+    </section>
+
+    <section class="features">
+      <div class="card_grid">
+        <div class="feature_card">
+          <h3>🐶 Report Sick Animal</h3>
+          <p>Let us know when you see an injured or sick animal. We’ll take it from there.</p>
+          <a href="{{ url_for('main.report') }}">Report Now</a>
         </div>
-    </header>
 
-    <div class="home_wrapper">
-        <section class="hero">
-            <h1>PawPal - Compassion in Action 🐾</h1>
-            <p class="quote">“Whoever is kind to the creatures of God is kind to himself.” <br><span>– Prophet Muhammad ﷺ (Bukhari)</span></p>
-            <p>We’re on a mission to connect compassion with action across Punjab — helping animals, registering vets, raising awareness, and more.</p>
-        </section>
+        <div class="feature_card">
+          <h3>🚨 Report Animal Cruelty</h3>
+          <p>Stand against abuse. Report cruelty cases safely and anonymously.</p>
+          <a href="{{ url_for('main.report_cruelty') }}">Submit Report</a>
+        </div>
 
-        <section class="features">
-            <div class="card_grid">
-                <div class="feature_card">
-                    <h3>🐶 Report Sick Animal</h3>
-                    <p>Let us know when you see an injured or sick animal. We’ll take it from there.</p>
-                    <a href="{{ url_for('main.report') }}">Report Now</a>
-                </div>
-                <div class="feature_card">
-                    <h3>🚨 Report Animal Cruelty</h3>
-                    <p>Stand against abuse. Report cruelty cases safely and anonymously.</p>
-                    <a href="{{ url_for('main.report_cruelty') }}">Submit Report</a>
-                </div>
-                <div class="feature_card">
-                    <h3>🐾 Register Veterinarian</h3>
-                    <p>If you're a vet, join our support network and help animals across Punjab.</p>
-                    <a href="{{ url_for('main.register') }}">Register</a>
-                </div>
-                <div class="feature_card">
-                    <h3>📍 Rescue Updates</h3>
-                    <p>Track ongoing rescue missions and view real-time updates.</p>
-                    <a href="{{ url_for('main.rescue_updates') }}">View Updates</a>
-                </div>
-                <div class="feature_card">
-                    <h3>🗺️ Shelter Map</h3>
-                    <p>Find nearby shelters and vet centers with our interactive Punjab map.</p>
-                    <a href="{{ url_for('main.map_page') }}">Explore Map</a>
-                </div>
-                <div class="feature_card">
-                    <h3>💰 Donate</h3>
-                    <p>Support animal welfare initiatives through transparent donation options.</p>
-                    <a href="{{ url_for('main.donate') }}">Donate Now</a>
-                </div>
-                <div class="feature_card">
-                    <h3>📖 Awareness</h3>
-                    <p>Learn more about animal rights, Islam’s perspective, and your responsibility.</p>
-                    <a href="{{ url_for('main.awareness') }}">Read More</a>
-                </div>
-                <div class="feature_card">
-                    <h3>🌿 Environment Blog</h3>
-                    <p>Explore blogs about nature, sustainability, and how animals fit into our ecosystem.</p>
-                    <a href="{{ url_for('main.blog') }}">Read Blogs</a>
-                </div>
-            </div>
-        </section>
+        <div class="feature_card">
+          <h3>🐾 Register Veterinarian</h3>
+          <p>If you're a vet, join our support network and help animals across Punjab.</p>
+          <a href="{{ url_for('main.register') }}">Register</a>
+        </div>
 
-        <section class="footer_hadith">
-            <p>“There is a reward for serving any living being.” – Prophet Muhammad ﷺ (Sahih Bukhari)</p>
-        </section>
-    </div>
+        <div class="feature_card">
+          <h3>📍 Rescue Updates</h3>
+          <p>Track ongoing rescue missions and view real-time updates.</p>
+          <a href="{{ url_for('main.rescue_updates') }}">View Updates</a>
+        </div>
+
+        <div class="feature_card">
+          <h3>🗺️ Shelter Map</h3>
+          <p>Find nearby shelters and vet centers with our interactive Punjab map.</p>
+          <a href="{{ url_for('main.map_page') }}">Explore Map</a>
+        </div>
+
+        <div class="feature_card">
+          <h3>💰 Donate</h3>
+          <p>Support animal welfare initiatives through transparent donation options.</p>
+          <a href="{{ url_for('main.donate') }}">Donate Now</a>
+        </div>
+
+        <div class="feature_card">
+          <h3>📖 Awareness</h3>
+          <p>Learn more about animal rights, Islam’s perspective, and your responsibility.</p>
+          <a href="{{ url_for('main.awareness') }}">Read More</a>
+        </div>
+
+        <div class="feature_card">
+          <h3>🌿 Environment Blog</h3>
+          <p>Explore blogs about nature, sustainability, and how animals fit into our ecosystem.</p>
+          <a href="{{ url_for('main.blog') }}">Read Blogs</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer_hadith">
+      <p>“There is a reward for serving any living being.” – Prophet Muhammad ﷺ (Sahih Bukhari)</p>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById("navLinks");
+      links.classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
