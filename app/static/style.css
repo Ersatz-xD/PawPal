@@ -23,12 +23,21 @@ header {
 header a {
     text-decoration: none;
     color: #333333;
-    padding-left: 2rem;
+    padding: 0.3rem 0.5rem;
+    margin: 0 0.3rem;
     font-size: 1.1rem;
     font-weight: bold;
     font-family: 'Segoe UI', sans-serif;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 5px;
 }
+
+header a:hover,
+header a.active {
+    color: #778899;
+    background-color: #E8D9C4;
+}
+
 
 header h2 {
     color: #A0522D;
@@ -38,12 +47,6 @@ header h2 {
     font-family: 'Lucida Sans', sans-serif;
 }
 
-header a:hover {
-    color: #778899;
-    background-color: #E8D9C4;
-    border-radius: 5px;
-    padding: 0.3rem 0.5rem;
-}
 
 .links {
     margin-left: 5rem;
