@@ -3,5 +3,10 @@
         "location": "Islamabad",
         "animal_type": "Husky",
         "incident": "Stabbed in the stomach"
+    },
+    {
+        "location": "Lahore",
+        "animal_type": "Donkey",
+        "incident": "Bullied, bleeding from the head"
     }
 ]
