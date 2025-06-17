@@ -169,6 +169,7 @@ header .links a.active {
 .main_div h2,
 .main_div_blog h2 {
     font-size: 2.5rem;
+    padding-top: 2rem;
     padding-bottom: 1.5rem;
     text-align: center;
     color: #A0522D;
@@ -272,7 +273,7 @@ header .links a.active {
 .aware p {
     font-size: 1.3rem;
     font-weight: 500;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .aware ul li {
@@ -300,8 +301,21 @@ header .links a.active {
 
 .env_blog p {
     font-size: 1.2rem;
+    padding-bottom: 15px;
 }
-
+.blog-post {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #A0522D;
+    background-color: #f4efefe2;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+.blog-post:hover {
+    transform: translateY(-5px);
+    background-color: #eceaeac4;
+}
 /* Donate */
 .donate_p {
     font-size: 1.2rem;
