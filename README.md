@@ -1,3 +1,3 @@
 # PawPal
-PawPal - Our civics project xD.
-Incomplete
+- PawPal - Our civics project xD.
+- Incomplete
